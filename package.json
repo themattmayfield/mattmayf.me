@@ -1,0 +1,14 @@
+{
+  "name": "clean-portfolio",
+  "scripts": {
+    "dev": "bun run --hot src/index.tsx"
+  },
+  "dependencies": {
+    "hono": "^4.7.1",
+    "tailwindcss": "^4"
+  },
+  "devDependencies": {
+    "@biomejs/biome": "1.9.4",
+    "@types/bun": "latest"
+  }
+}
