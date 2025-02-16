@@ -1,14 +1,19 @@
 {
-  "name": "clean-portfolio",
+  "name": "mattmayf.me",
   "scripts": {
-    "dev": "bun run --hot src/index.tsx"
+    "dev": "sst dev",
+    "dev:sad": "bun run --hot src/index.ts"
   },
   "dependencies": {
     "hono": "^4.7.1",
-    "tailwindcss": "^4"
+    "sst": "3.9.2",
+    "tailwindcss": "^4",
+    "@aws-sdk/client-s3": "^3.701.0",
+    "@aws-sdk/s3-request-presigner": "^3.701.0"
   },
   "devDependencies": {
     "@biomejs/biome": "1.9.4",
+    "@types/aws-lambda": "8.10.147",
     "@types/bun": "latest"
   }
 }
