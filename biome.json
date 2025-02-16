@@ -1,7 +1,7 @@
 {
   "$schema": "https://biomejs.dev/schemas/1.8.0/schema.json",
   "files": {
-    "ignore": ["node_modules", "bun.lock"]
+    "ignore": ["node_modules", "bun.lock", "pnpm-lock.yaml"]
   },
   "linter": {
     "enabled": true,

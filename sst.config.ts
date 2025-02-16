@@ -23,6 +23,12 @@ export default $config({
       url: true,
       link: [bucket],
       handler: 'src/index.handler',
+      copyFiles: [
+        {
+          from: 'public',
+          to: 'public',
+        },
+      ],
     });
   },
 });
