@@ -1,11 +1,13 @@
 {
   "name": "mattmayf.me",
   "scripts": {
-    "dev": "sst dev"
+    "dev": "sst dev",
+    "diff": "sst diff",
+    "refresh": "sst refresh"
   },
   "dependencies": {
     "hono": "^4.7.1",
-    "sst": "3.9.2",
+    "sst": "3.9.5",
     "tailwindcss": "^4",
     "@aws-sdk/client-s3": "^3.701.0",
     "@aws-sdk/s3-request-presigner": "^3.701.0",

@@ -14,6 +14,10 @@ declare module "sst" {
       "name": string
       "type": "sst.aws.Bucket"
     }
+    "MyRouter": {
+      "type": "sst.aws.Router"
+      "url": string
+    }
   }
 }
 /// <reference path="sst-env.d.ts" />

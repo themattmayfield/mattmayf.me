@@ -1,5 +1,4 @@
 /// <reference path="./.sst/platform/config.d.ts" />
-
 export default $config({
   app(input) {
     return {
@@ -12,6 +11,7 @@ export default $config({
           region: 'us-east-1',
           profile: 'agape-media-dev',
         },
+        cloudflare: '5.49.0',
       },
     };
   },
@@ -19,7 +19,7 @@ export default $config({
     const bucket = new sst.aws.Bucket('MyBucket', {
       access: 'public',
     });
-    new sst.aws.Function('Hono', {
+    const hono = new sst.aws.Function('Hono', {
       url: true,
       link: [bucket],
       handler: 'src/index.handler',
@@ -29,6 +29,18 @@ export default $config({
           to: 'public',
         },
       ],
+    });
+    new sst.aws.Router('MyRouter', {
+      domain: {
+        name:
+          process.env.SST_STAGE === 'matthewmayfield'
+            ? 'test.themattmayfield.com'
+            : 'themattmayfield.com',
+        dns: sst.cloudflare.dns(),
+      },
+      routes: {
+        '/*': hono.url,
+      },
     });
   },
 });
