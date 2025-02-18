@@ -16,5 +16,6 @@
   "devDependencies": {
     "@biomejs/biome": "1.9.4",
     "@types/aws-lambda": "8.10.147"
-  }
+  },
+  "packageManager": "pnpm@10.2.1"
 }
