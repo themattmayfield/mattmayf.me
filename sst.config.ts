@@ -3,8 +3,8 @@ export default $config({
   app(input) {
     return {
       name: 'mattmayf-me',
-      removal: input?.stage === 'production' ? 'retain' : 'remove',
-      protect: ['production'].includes(input?.stage),
+      removal: input?.stage === 'main' ? 'retain' : 'remove',
+      protect: ['main'].includes(input?.stage),
       home: 'aws',
       providers: {
         aws: {
