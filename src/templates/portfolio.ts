@@ -2,6 +2,7 @@ import { github } from '../../public/icons/github';
 import type { PortfolioData } from '../data/portfolio-data';
 import { getS3Link } from '../lib/getS3Link';
 import { renderAbout } from './components/about';
+import { renderBuiltWith } from './components/built-with';
 import { renderHeader } from './components/header';
 
 export function renderPortfolio(data: PortfolioData): string {
@@ -46,6 +47,10 @@ export function renderPortfolio(data: PortfolioData): string {
            ${renderHeader()}
        
                 ${renderAbout()}
+
+<hr class="w-[50px] my-8 mx-auto border-[#7d7d7d4d]" />
+
+                ${renderBuiltWith()}
         </main>
     </div>
     <script src="/typing-effect.js"></script>
