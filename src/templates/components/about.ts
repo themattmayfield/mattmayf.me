@@ -18,7 +18,7 @@ export const renderAbout = () => `
     lifting weights, and being outdoors. I'm a sucker for a hot bowl of bún bò huế, 
     and don't get me started on what'd I'd do for some korean bbq.</p>
     
-    <p>Watching anime, and listening to music are some of my favorite pastimes, but most 
+    <p><a href="https://anime.themattmayfield.com/" class="text-white underline">Watching anime</a>, and listening to music are some of my favorite pastimes, but most 
     of all, I love spending time with my family and friends.</p>
   </section>
 `;
